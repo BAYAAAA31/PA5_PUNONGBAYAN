@@ -55,21 +55,17 @@ Z_Dot_Apostrophe = Z.'
 
 ```
 % Answer the following in MATLAB comments below your output:
-%
 % a. Which operations give identical results for the real matrix R?
-% -- All three operations — transpose(R), R', and R.' — produce    
-%    identical results for the real matrix R because all elements 
+% -- All three operations result to identical results for the real matrix R, since all elements 
 %    are purely real.
 %
 % b. Which two operations give identical results for the complex matrix Z?
-% -- transpose(Z) and Z.' give identical results for the complex 
-%    matrix Z. Both compute the non-conjugate transpose (array transpose).
+% -- transpose(Z) and Z.
 %
 % c. What additional operation is performed by the apostrophe operator (')
 %    when the matrix contains complex entries?
 % -- The single apostrophe operator (') computes the complex-conjugate
-%    transpose. In addition to swapping rows and columns,
-%    it negates the imaginary component of each complex element.
+%    transpose. 
 ```
 ---
 #### **B. TWO METHODS FOR A LINEAR SYSTEM 📐**
