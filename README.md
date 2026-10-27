@@ -68,7 +68,7 @@ Z_Dot_Apostrophe = Z.'
 %    transpose. 
 ```
 ---
-#### **B. TWO METHODS FOR A LINEAR SYSTEM 📐**
+#### **B. TWO METHODS FOR A LINEAR SYSTEM**
 
 Solve the simultaneous system of linear equations
 Construct coefficient matrix **A** and right-hand-side vector **b**. 
