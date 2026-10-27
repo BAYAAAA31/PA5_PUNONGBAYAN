@@ -1,0 +1,94 @@
+% Course: ECE 2112 - Advanced Computer Programming and Algorithms
+% Experiment 5: Introduction to MATLAB Programming
+% File Name: pa5_PUNONGBAYAN.m
+% Student Name: Punongbayan, AJ andriz J.
+% Section: 2ECE-A
+% Date Submitted: 10/26/2026
+
+%% PROBLEM A: TRANSPOSE OPERATIONS
+
+% Matrix R 
+R = [ 5 -2  0  7;
+    1  3 -4  2;
+    6  0  8 -1];
+
+R
+
+% Matrix R transpose forms
+Transpose_R = transpose(R)
+
+R_Apostrophe = R'
+
+R_Dot_Apostrophe = R.'
+
+% Matrix Z 
+Z = [ 2+3i  -1+4i   5-2i; -3+1i   6      2+5i];
+Z
+
+% Matrix Z transpose forms
+Transpose_Z = transpose(Z)
+
+Z_Apostrophe = Z'
+
+Z_Dot_Apostrophe = Z.'
+
+% Answer the following in MATLAB comments below your output:
+% a. Which operations give identical results for the real matrix R?
+% -- All three operations result to identical results for the real matrix R, since all elements 
+%    are purely real.
+%
+% b. Which two operations give identical results for the complex matrix Z?
+% -- transpose(Z) and Z.
+%
+% c. What additional operation is performed by the apostrophe operator (')
+%    when the matrix contains complex entries?
+% -- The single apostrophe operator (') computes the complex-conjugate
+%    transpose. 
+
+%% PROBLEM B: TWO METHODS FOR A LINEAR SYSTEM
+
+% Coefficient matrix A  
+A = [ 2 -1  3  2;
+    1  4 -2  1;
+    3  2  1 -1;
+    -2  3  4  2];
+A
+
+% Right-hand-side vector b.
+b = [16; -7; 6; 7];
+b
+
+% Determinant A
+detA = det(A)
+
+% Inverse Method
+x_inv = inv(A) * b;
+x_inv
+
+% Cramer's Rule
+A1 = A; A1(:, 1) = b;
+A2 = A; A2(:, 2) = b;
+A3 = A; A3(:, 3) = b;
+A4 = A; A4(:, 4) = b;
+
+A1
+detA1 = det(A1)
+
+A2
+detA2 = det(A2)
+
+A3
+detA3 = det(A3)
+
+A4
+detA4 = det(A4)
+
+x_cramer = [det(A1); 
+    det(A2); 
+    det(A3); 
+    det(A4)] / det(A);
+x_cramer
+
+% Numerical precision
+normdiff = norm(x_inv-x_cramer)
+normprod = norm(A * x_inv - b)
